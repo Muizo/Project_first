@@ -1,0 +1,51 @@
+/*CSS RESRT*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.849);
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main {
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.build {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.build::before,
+.build::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #212121;
+    border-left: 2px solid white;
+    border-right: 3px solid white;
+    content: "";
+    opacity: 0.9;
+    z-index: 1;
+}
+
+
+
+

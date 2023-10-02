@@ -1,0 +1,73 @@
+/*FONT FAMILY*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+body {
+    background-color: #00000088;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    width: 350px;
+    height: 450px;
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    margin-left: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.profile {
+    border: 2px solid whitesmoke;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h4 {
+    text-align: center;
+    margin-top: -20px;
+    color:rgba(0, 0, 0, 0.404);
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.774);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+
+
+
+
+
