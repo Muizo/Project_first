@@ -1,0 +1,72 @@
+body {
+    background: #f2f2f2;
+}
+
+.content-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    background: #f2f2f2;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #dedede;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: justify;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight:700;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.flap {
+    width: 100%;
+    height: 100%;
+}
+
+.flap::before {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 50%;
+    background: white;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    transition: 1s;
+
+}
+
+.flap::after {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background: white;
+    background-position: -200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.content-box:hover .flap::after{
+    transform: translateX(300px);
+}
+
+.content-box:hover .flap::before{
+    transform: translateX(-300px);
+}

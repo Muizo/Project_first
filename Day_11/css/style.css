@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 16px;
+    flex: 1;
+    background-color: #2f94d8;
+    justify-content: center;
+    align-items: center;
+    overflow-y: none;
+}
+
+button img {
+    transition: transform 0.25s;
+}
+
+button:hover img {
+    transform: scale(1.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+input {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+input::placeholder{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchBox {
+    height: 60px;
+    width: 450px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50px;
+    display: flex;
+}
+
+.searchBox .btn-menu {
+    padding: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer; 
+}
+
+.searchBox .search {
+    border: none;
+    width: 100%;
+}
+
+.searchBox .btn-search {
+    padding: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-modal {
+    height: 450px;
+    width: 450px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 160px;
+    animation: slide 0.9s;
+    transition:all 0.5s;
+    /* display: none; */
+}
+
+.search-modal-header {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #000 17;
+}
+
+.search-modal-header h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    float: left;
+}
+
+.search-modal-header span img {
+    float: right;
+    position: absolute;
+    right: 16px;
+    top: 25px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.search-modal-header span img:hover {
+    transform: scale(1.2);
+}
+
+.search-modal-body {
+    padding: 20px;
+    height: 285px;
+    overflow-y: scroll;
+}
+
+.search-modal-body .message {
+    display: flex;
+    cursor: pointer;
+    padding: 10px 15px;   
+}
+
+.search-modal-body .message-avatar {
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.search-modal-body .message-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0, 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.search-modal-body .message-body {
+    margin-left: 0;
+    margin-top: 8px;
+}
+
+.search-modal-body .message-body p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.search-modal-body .message-body small {
+    font-weight: 400;
+    color:#777;
+}
+
+.search-modal-body .message:hover {
+    background-color: #2f94d8 17;
+}
+
+.search-modal-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.search-modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.search-modal-body::-webkit-scrollbar-thumb {
+    background: #2f94d8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.search-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 15%, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+body {
+    background-color: rgb(133, 6, 6);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box {
+    background-color: rgb(32, 36, 46);
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 10px;
+    max-width: 400px;
+    min-width: 250px; 
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-box * {
+    -webkit-box-sizing: border-box ;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.content-box::before,
+.content-box::after {
+    background-color: rgba(46, 45, 56, 0.5);
+    border-top: 50px solid rgba(46, 45, 56, 0.5);
+    border-bottom: 50px solid rgba(40, 45, 56, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 1;
+    opacity: 0;
+    content: "";
+}
+
+.content-box::before {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.content-box::after {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.content-box img {
+    vertical-align: top;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.content-box h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.content-box:hover img {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.content-box figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    line-height: 1rem;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.content-box:hover::before,
+.content-box.hover::before,
+.content-box:hover::after,
+.content-box:hover::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.content-box:hover figcaption {
+    opacity: 1;
+    -webkit-transition:all 0s ease 0.2s ;
+    transition: all 0s ease 0.2s;
+}
+
+
+.content-box:hover .anime {
+    animation-name: slide;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media all and (min-width: 400px) {
+    body {
+        background-color: white;
+    }
+}
+
+@media all and (min-width: 640px) {
+    body {
+        background-color: rgb(58, 165, 165);
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        background-color: rgb(72, 201, 126);
+    }
+}
+
+@media all and (min-width: 1024px) {
+    body {
+        background-color: brown;
+    }
+}

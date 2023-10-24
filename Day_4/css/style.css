@@ -1,0 +1,116 @@
+body {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-box {
+    background-color: #000;
+    color: white;
+    max-width: 370px;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.content-box * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.content-box h3 {
+    border: 2px solid #fff;
+    background-color: #111;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 6px 11px;
+    text-transform: uppercase;
+}
+
+.content-box a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.content-box::before,
+.content-box::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #000;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    content: " ";
+    opacity: 0;
+    z-index: 1;
+}
+
+.content-box::before {
+    -webkit-transform: skew(45deg) translateX(-155%);
+    transform: skew(45deg) translateX(-155%);
+}
+
+.content-box::after {
+    -webkit-transform: skew(45deg) translateX(155%);
+    transform: skew(45deg) translateX(155%);
+}
+
+.content-box img {
+     width: 100%;
+     backface-visibility: hidden;
+     vertical-align: top;
+}
+
+.content-box figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    -webkit-transform: (-50%, -50%) scale(0.5);
+    transform: (-50%, -50%) scale(0.5);
+    box-shadow: 0 0 30px #000;
+    opacity: 0;
+}
+
+.content-box:hover::before {
+    -webkit-transform: skew(45deg) translateX(-60%);
+    transform: skew(45deg) translateX(-60%);
+    opacity: 0.9;
+}
+
+.content-box:hover::after {
+    -webkit-transform: skew(45deg) translateX(60%);
+    transform: skew(45deg) translateX(60%);
+    opacity: 0.9;
+}
+
+.content-box:hover figcaption {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
